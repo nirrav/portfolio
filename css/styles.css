@@ -154,7 +154,8 @@
 .text {
     text-align: center;
     background-color: white;
-    font-size: 2em;
+    font-size: clamp(1.5em, 2vw, 2em);
+    /* Adjust minimum, preferred, and maximum font size */
 }
 
 /* --------------------CARDS-------------------- */
@@ -473,11 +474,17 @@ section {
     }
 
     .project_card_container {
-        width: 90%; /* Adjust project card container width */
-        margin: 30px auto; /* Adjust margin to center horizontally */
-        display: flex; /* Add flex display */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
-        flex-wrap: wrap; /* Ensure items wrap if they exceed container width */
+        width: 90%;
+        /* Adjust project card container width */
+        margin: 30px auto;
+        /* Adjust margin to center horizontally */
+        display: flex;
+        /* Add flex display */
+        justify-content: center;
+        /* Center items horizontally */
+        align-items: center;
+        /* Center items vertically */
+        flex-wrap: wrap;
+        /* Ensure items wrap if they exceed container width */
     }
 }
