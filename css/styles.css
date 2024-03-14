@@ -16,25 +16,18 @@
     box-sizing: border-box;
     font-family: "Poppins", "RobotoRegular", sans-serif;
     font-weight: 700;
-    /* Make the font thicker */
 }
 
 /*-------------------- NAVBAR-------------------- */
 .navbar {
-    /* background-color: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); Apply a blur effect */
     height: 60px;
-    /* position: fixed;
-    width: 100vw; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     background: transparent;
     backdrop-filter: blur(10px);
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); Add a subtle shadow */
 }
-
 
 .left {
     color: rgb(0, 0, 0);
@@ -70,8 +63,8 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    /* background-image: linear-gradient(to right, rgb(19, 19, 19) ,rgb(78, 78, 78)); */
     background-color: #000000bb;
+    padding: 20px;
 }
 
 .photo {
@@ -80,14 +73,11 @@
     border-radius: 50%;
     margin: 5vw;
     transition: transform 0.3s ease;
-    /* Add smooth transition effect */
 }
 
 .photo:hover {
     transform: scale(1.4);
-    /* Increase the size of the image on hover */
 }
-
 
 .name {
     width: 100%;
@@ -96,7 +86,6 @@
     margin: 15vw;
     text-align: left;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    /* Enhance reflective effect */
     position: relative;
 }
 
@@ -107,28 +96,18 @@
     bottom: 0;
     width: 0%;
     height: 5px;
-    /* Adjust the height of the underline */
     background-color: #000000;
-    /* Color of the underline */
     transition: width 0.9s ease;
-    /* Transition effect for the width */
 }
 
 .name:hover::after {
     width: 100%;
-    /* Make the underline fully visible on hover */
 }
-
-
 
 .client-description {
     font-size: 1.4em;
     max-width: 800px;
     margin: 0 auto;
-}
-
-.client-description a {
-    text-decoration: none;
 }
 
 /* Responsive styles */
@@ -155,6 +134,20 @@
 
     .client-info {
         margin-top: 20px;
+    }
+
+    .photo {
+        width: 200px;
+        margin: 5%;
+    }
+
+    .name {
+        font-size: 3em;
+        margin: 10vw;
+    }
+
+    .client-description {
+        font-size: 1em;
     }
 }
 
@@ -211,10 +204,6 @@
 
 .container .card:hover .content a {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, .2), -1px -1px 2px rgba(255, 255, 255, .4);
-}
-
-.container .card .content a:active {
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .1), inset 5px 5px 5px rgba(0, 0, 0, .04), inset -5px -5px 5px rgba(255, 255, 255, .07), inset -1px -1px 2px rgba(255, 255, 255, .4);
 }
 
 .container .card .circle {
@@ -288,6 +277,7 @@
         color: #fff;
     }
 }
+
 /*--------------------- PROJECT_CARDS ---------------------*/
 .project_card_container {
     width: 100%;
@@ -298,7 +288,8 @@
     align-items: stretch;
     gap: 1.25rem;
     transition: all 400ms;
-    margin: 0 auto; /* Center the container horizontally */
+    margin: 0 auto;
+    /* Center the container horizontally */
 }
 
 
@@ -331,9 +322,11 @@
 .project_card:hover {
     flex: 3;
 }
-.text h1{
+
+.text h1 {
     margin-bottom: 8vh !important;
 }
+
 /* -----------------------NAVBAR -----------------------*/
 .background {
     /* position: fixed; */
@@ -353,14 +346,15 @@ ul {
 
 .socials {
     gap: 20px;
-    
+
 }
 
 
 .socials a {
     font-size: 24px;
     text-decoration: none;
-    color: white; /* Change the color to white */
+    color: white;
+    /* Change the color to white */
 }
 
 
@@ -423,4 +417,67 @@ section {
 .links a {
     text-decoration: none;
     color: #fff;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .center {
+        width: 100%;
+        text-align: center;
+    }
+
+    .center a {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .client-info {
+        flex-direction: column-reverse;
+        /* Change flex direction to display name above photo */
+        align-items: center;
+        /* Center align items */
+    }
+
+    .photo {
+        width: 200px;
+        margin: 5% auto;
+        /* Center the photo */
+    }
+
+    .name {
+        font-size: 3em;
+        margin: 5vw auto 0;
+        /* Adjust margin for spacing */
+        text-align: center;
+        /* Center align the name */
+    }
+
+    .container {
+        flex-direction: column;
+        /* Change flex direction to display cards and project cards vertically */
+        align-items: center;
+        /* Center align items */
+    }
+
+    .container .card {
+        width: 90%;
+        /* Adjust card width */
+        margin: 20px 0;
+        /* Adjust margin */
+    }
+
+    .project_card_container {
+        width: 90%; /* Adjust project card container width */
+        margin: 30px auto; /* Adjust margin to center horizontally */
+        display: flex; /* Add flex display */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+        flex-wrap: wrap; /* Ensure items wrap if they exceed container width */
+    }
 }
